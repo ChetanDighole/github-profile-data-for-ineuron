@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex flex-col items-center justify-center min-h-screen">
+        <h1 class="text-3xl font-bold mb-6">GitHub User Search</h1>
+        <form id="search-form" class="flex flex-col items-center">
+            <label for="username" class="mb-2">Enter a GitHub username:</label>
+            <input type="text" id="username" name="username" class="border border-gray-300 rounded-md p-2 mb-4 w-full" required>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Search</button>
+        </form>
+        <div id="user-info" class="hidden mt-6">
+            <div class="flex flex-col items-center">
+                <img id="avatar" src="" alt="" class="w-24 h-24 rounded-full mb-4">
+                <h2 id="name" class="text-2xl font-bold mb-2"></h2>
+                <p id="bio" class="text-lg text-gray-700 mb-2"></p>
+            </div>
+            <div class="flex justify-around gap-4 mt-6">
+                <div class="text-center">
+                    <h3 class="font-bold">Repositories</h3>
+                    <p id="repos" class="text-lg"></p>
+                </div>
+                <div class="text-center">
+                    <h3 class="font-bold">Followers</h3>
+                    <ul id="followers" class="text-lg"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
+</html>
